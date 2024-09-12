@@ -13,7 +13,7 @@ int    ft_double(char *str, char c, int n)
     return(1);
 }
 
-int ft_check(char *str, char c)
+int ft_search(char *str, char c)
 {
     int i;
     i = 0;
@@ -32,9 +32,9 @@ void    ft_inter(char *s1, char *s2)
     i = 0;
     while(s1[i])
     {
-        if (ft_check(s1[i], s2) == 0)
+        if (ft_search(s1[i], s2) == 0)
         {
-            if (ft_double(s1[i], s1, i) == 0)
+            if (ft_double(s1[i], s1, i) == 1)
                 write(1, &s1[i], 1);
         }
         i++;

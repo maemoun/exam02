@@ -13,8 +13,7 @@ int ft_double(char *str, char c, int n)
 	return(1);
 }
 
-
-int ft_check(char *str, char c)
+int ft_search(char *str, char c)
 {
 	int i;
 	i = 0;
@@ -33,16 +32,16 @@ void    ft_union(char *s1, char *s2)
 	i = 0;
 	while(s1[i])
 	{
-		if (ft_double(s1, s1[i], i) == 0)
+		if (ft_double(s1, s1[i], i) == 1)
 			write(1, &s1[i], 1);
 		i++;
 	}
 	i = 0;
 	while (s2[i])
 	{
-		if (ft_check(s1, s2[i]) == 0)
+		if (ft_search(s1, s2[i]) == 1)
 		{
-			if (ft_double(s2, s2[i], i) == 0)
+			if (ft_double(s2, s2[i], i) == 1)
 				write(1, &s2[i], 1);
 		}
 		i++;
