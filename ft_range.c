@@ -23,6 +23,12 @@ int *ft_range(int start, int end)
         start++;
         i++;
     }
+    while (start >= end)
+    {
+        tab[i] = start;
+        start--;
+        i++;
+    }
     return(tab);
 }
 
@@ -30,6 +36,6 @@ int *ft_range(int start, int end)
 
 int main()
 {
-    ft_range(1, 3);
-    printf("%d%d%d\n", tab[0], tab[1], tab[2]);
+    int *tt = ft_range(0, -1);
+    printf("%d%d\n", tt[0], tt[1]);
 }
