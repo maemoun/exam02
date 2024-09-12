@@ -38,6 +38,7 @@ int main(int ac, char **av)
                 if (av[1][i] == av[2][j])
                 {
                     nb++;
+                    j++;
                     break;
                 }
                 j++;
